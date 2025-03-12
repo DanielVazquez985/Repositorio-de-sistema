@@ -1,10 +1,10 @@
 def mostrar_menu():
     print("""
-    ============================
-         CONTROL DE MOTOR
-    ============================
-    1. Establecer velocidad
-    2. Ver estado del motor
+
+     SISTEMA DE "CONTROL DE MOTOR"
+  
+    1. Velocidad establecida
+    2. Estado del motor
     3. Stop
     4. Salir
     """)
@@ -16,9 +16,9 @@ def obtener_velocidad():
             if -255 <= vel <= 255:
                 return vel
             else:
-                print("⚠ Error: La velocidad debe estar en el rango [-255, 255].")
+                print(" Error: La velocidad debe estar en el rango [-255, 255].")
         except ValueError:
-            print("⚠ Error: Entrada inválida. Ingresa un número entero.")
+            print(" Error: Entrada inválida. Ingresa un número entero.")
 
 motor_encendido = True
 velocidad = 0
@@ -53,4 +53,4 @@ while motor_encendido:
         motor_encendido = False
 
     else:
-        print("⚠ Opción no válida. Intenta nuevamente.")
+        print(" Opción no válida. Intenta nuevamente.")
